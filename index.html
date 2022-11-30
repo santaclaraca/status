@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="refresh" content="120">
-	<title>Uptime local for now</title>
+	<meta name="robots" content="noindex">
+	<title>Status Dashboard</title>
 
 	<!-- INCLUDING JQUERY-->
 	<script src=
@@ -29,7 +30,7 @@
 			width: 15px; 
 			height: 15px;
 			border: 1px solid #FFF; 
-			margin: 0 20px;
+			margin: auto;
 		}
 		.up {background-color:greenyellow}
 		.down {background-color:red}
@@ -45,6 +46,10 @@
 		}
 		tr:nth-child(even) {background: rgb(231, 231, 231)}
 		tr:nth-child(odd) {background: #FFF}
+		td:nth-child(1) {width: 320px;}
+		td:nth-child(2) {
+			width: 60px; 
+			text-align: center;}
 		th,
 		td {
 			padding: 10px;
@@ -101,7 +106,7 @@
 			<table>
 				<!-- HEADING FORMATION -->
 				<tr>
-					<th>Website</th>
+					<th>Manual check</th>
 					<th>Link</th>
 				</tr>
 				<tr>
