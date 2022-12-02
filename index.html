@@ -87,7 +87,14 @@
 
 							//CONSTRUCTION OF ROWS HAVING
 							// DATA FROM JSON OBJECT
-							upstatus += '<tr>';
+                            value.url = value.url.replace("$TITAN", "https://cityofsantaclara.mytitan.net/app/alarms.aspx");
+                            value.url = value.url.replace("$SITE_MAIN_ADMIN", "https://www.santaclaraca.gov/Admin/");
+                            value.url = value.url.replace("$SITE_MAIN_EMAIL", "https://admin.govdelivery.com/");
+                            value.url = value.url.replace("$SITE_SEO_C", "https://my.cludo.com/");
+                            value.url = value.url.replace("$SITE_SAFETY", "https://mark43.com/");
+                            value.url = value.url.replace("$SITE_SAAS_PERF", "https://id.siteimprove.com/Account/Login");
+                            value.url = value.url.replace("$SITE_PEOPLESOFT", "https://ESS.SantaClaraCA.gov");
+                            value.url = value.url.replace("$CUSTOMER_CONNECT", "https://mua.santaclaraca.gov/CC/Login.xml");							upstatus += '<tr>';    
 							if (value.url.startsWith("$")) {upstatus += '<td>' + value.name + '</td>';
 							}
 							else {
@@ -158,3 +165,4 @@
 			</table>
 	</section>
 </body>
+
