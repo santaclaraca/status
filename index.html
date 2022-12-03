@@ -17,19 +17,25 @@
         * {font-family: 'Gill Sans',
 				'Gill Sans MT', ' Calibri',
 				'Trebuchet MS', 'sans-serif';}
+		.box {
+            display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+          	}
 		a {text-decoration: none;}
 		table {
 			margin: 0 auto;
 			font-size: large;
-			border: 0;
+			border: 1px #ccc solid;
 			border-spacing:0;
+			background-color: #FFF;
 		}
 		.light {text-align: center;}
 		.light span {display:none}
 		.light div { 	
 			width: 15px; 
 			height: 15px;
-			border: 1px solid #FFF; 
+			border: 1px solid #ccc; 
 			margin: auto;
 		}
 		.up {background-color:greenyellow}
@@ -37,34 +43,41 @@
 		
 		h1 {
 			text-align: center;
-			color: #999;
+			color: #FFF;
 			font-size: x-large;
+			padding: 30px;
+			text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
 		}
-
 		td {
 			border: none;
 		}
-		tr:nth-child(even) {background: rgb(231, 231, 231)}
-		tr:nth-child(odd) {background: #FFF}
-		td:nth-child(1) {width: 320px;}
-		td:nth-child(2) {
-			width: 60px; 
-			text-align: center;}
+		tr:nth-child(even) {
+			background-color: #f5f5f7;
+		}
 		th,
 		td {
-			padding: 10px;
+			padding: 5px 10px;
 			text-align: center;
+			border-bottom: 1px #ccc solid
 		}
 		td:nth-child(1) {
             text-align: left;
 		}
+		h1, th {background-color: #e5e5e6;
+opacity: 0.8;
+background-size: 12px 12px;
+background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.2000000000000002px, #e5e5e6 0, #e5e5e6 50%);}
 	</style>
 </head>
 
 <body>
 	<section>
 		<h1>Uptime CSC</h1>
-
+		<div class="box">
+			
 		<!-- TABLE CONSTRUCTION-->
 		<table id='table'>
 			<!-- HEADING FORMATION -->
@@ -87,14 +100,7 @@
 
 							//CONSTRUCTION OF ROWS HAVING
 							// DATA FROM JSON OBJECT
-                            value.url = value.url.replace("$TITAN", "https://cityofsantaclara.mytitan.net/app/alarms.aspx");
-                            value.url = value.url.replace("$SITE_MAIN_ADMIN", "https://www.santaclaraca.gov/Admin/");
-                            value.url = value.url.replace("$SITE_MAIN_EMAIL", "https://admin.govdelivery.com/");
-                            value.url = value.url.replace("$SITE_SEO_C", "https://my.cludo.com/");
-                            value.url = value.url.replace("$SITE_SAFETY", "https://mark43.com/");
-                            value.url = value.url.replace("$SITE_SAAS_PERF", "https://id.siteimprove.com/Account/Login");
-                            value.url = value.url.replace("$SITE_PEOPLESOFT", "https://ESS.SantaClaraCA.gov");
-                            value.url = value.url.replace("$CUSTOMER_CONNECT", "https://mua.santaclaraca.gov/CC/Login.xml");							upstatus += '<tr>';    
+							upstatus += '<tr>';
 							if (value.url.startsWith("$")) {upstatus += '<td>' + value.name + '</td>';
 							}
 							else {
@@ -110,6 +116,7 @@
                             });
 				});
 			</script>
+			
 			<table>
 				<!-- HEADING FORMATION -->
 				<tr>
@@ -163,6 +170,8 @@
 					</tr>
 				</tbody>
 			</table>
+		
+		</div>
 	</section>
 </body>
 
