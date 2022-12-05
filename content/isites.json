@@ -1,12 +1,58 @@
 [
     {
-      "name": "Lucity",
-      "url": "https://lucityprod.santaclaraca.gov/LucityWeb/Public/Login.aspx?ReturnUrl=%2fLucityWeb%2f",
-      "icon": "https://icons.duckduckgo.com/ip3/www.santaclaraca.gov.ico"
+        "name": "Lucity",
+        "url": "https://lucityprod.santaclaraca.gov/LucityWeb/Public/Login.aspx?ReturnUrl=%2fLucityWeb%2f",
+        "icon": "https://icons.duckduckgo.com/ip3/www.santaclaraca.gov.ico"
     },
     {
-      "name": "Laserfiche CSC",
-      "url": "https://lfprod.santaclaraca.gov/laserfiche/",
-      "icon": "https://icons.duckduckgo.com/ip3/null.ico"
-    }
+        "name": "Laserfiche CSC",
+        "url": "https://lfprod.santaclaraca.gov/laserfiche/",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "Laserfiche Form",
+        "url": "https://lfprod.santaclaraca.gov/Forms/",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "Laserfiche WebAdmin",
+        "url": "https://lfprod.santaclaraca.gov/WebAdmin/",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "EIS",
+        "url": "http://harriseis/eis",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "mCare Office",
+        "url": "ttps://nstarprod.santaclaraca.gov/mcare",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "mCare Field",
+        "url": "https://nstarprod.santaclaraca.gov/field",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "Anywhere Reporting (Cognos)",
+        "url": "http://vsrvprdnsra03:9300/bi/",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "Metaviewer",
+        "url": "https://prodmv.city.santaclara.local/MetaViewer/",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "Contact center (Ignite)",
+        "url": "https://micc.santaclaraca.gov/Ignite/#!/login",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {
+        "name": "Contact center (call recording)",
+        "url": "https://mivcr.santaclaraca.gov/Navigator/Login",
+        "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    }    
+
 ]
