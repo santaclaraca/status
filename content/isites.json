@@ -1,0 +1,13 @@
+[
+    {
+      "name": "Lucity",
+      "url": "https://lucityprod.santaclaraca.gov/LucityWeb/Public/Login.aspx?ReturnUrl=%2fLucityWeb%2f",
+      "icon": "https://icons.duckduckgo.com/ip3/www.santaclaraca.gov.ico"
+    },
+    {
+      "name": "Laserfiche CSC",
+      "url": "https://lfprod.santaclaraca.gov/laserfiche/",
+      "icon": "https://icons.duckduckgo.com/ip3/null.ico"
+    },
+    {}
+]
