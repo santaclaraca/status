@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="refresh" content="120">
 	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<title>Status Dashboard</title>
 
 	<!-- INCLUDING JQUERY-->
@@ -20,6 +22,8 @@
 			width: fit-content;
 			margin: auto;
 			}
+		.material-icons {}
+
 		.box {
             display: flex;
 			justify-content: space-around;
@@ -117,7 +121,7 @@ background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.20000000
 							}
 							else {
                             upstatus += '<td><a href=\"' + 
-								value.url + '\" target=\"_blank\">' + value.name + '</a></td>';}
+								value.url + '\" target=\"_blank\">' + value.name + '</td>';}
 							upstatus += '<td class=\"light\"><div class=\"' + value.status + '\"></div><span>' +
 								value.status + '</span></td>';
 							upstatus += '</tr>';
@@ -129,59 +133,40 @@ background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.20000000
 				});
 			</script>
 			
-			<table>
+			<table id="table1">
 				<!-- HEADING FORMATION -->
 				<tr>
 					<th>Manual check</th>
 					<th>Link</th>
 				</tr>
-				<tbody>
-					<tr>
-						<td>Lucity</td>
-						<td><a href="https://lucityprod.santaclaraca.gov/LucityWeb/Public/Login.aspx?ReturnUrl=%2fLucityWeb%2f" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Laserfiche CSC</td>
-						<td><a href="https://lfprod.santaclaraca.gov/laserfiche/" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Laserfiche Forms</td>
-						<td><a href="https://lfprod.santaclaraca.gov/Forms/" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Laserfiche WebAdmin</td>
-						<td><a href="https://lfprod.santaclaraca.gov/WebAdmin/" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>EIS</td>
-						<td><a href="http://harriseis/eis" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>mCare Office</td>
-						<td><a href="https://nstarprod.santaclaraca.gov/mcare" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>mCare Field</td>
-						<td><a href="https://nstarprod.santaclaraca.gov/field" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Anywhere Reporting (Cognos)</td>
-						<td><a href="http://vsrvprdnsra03:9300/bi/" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Metaviewer</td>
-						<td><a href="https://prodmv.city.santaclara.local/MetaViewer/" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Contact center (Ignite)</td>
-						<td><a href="https://micc.santaclaraca.gov/Ignite/#!/login" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-					<tr>
-						<td>Contact center (call recording)</td>
-						<td><a href="https://mivcr.santaclaraca.gov/Navigator/Login" target="_blank"><img src="https://raw.githubusercontent.com/santaclaraca/status/gh-pages/shield-02.jpg" alt="Check manually"></a></td>
-					</tr>
-				</tbody>
-			</table>
+				<script>
+					$(document).ready(function () {
+						// FETCHING DATA FROM JSON FILE
+						var rawbase = 'https://raw.githubusercontent.com/';
+						var jsonloc = 'santaclaraca/status/gh-pages/content/isites.json';
+	
+						$.getJSON(rawbase + jsonloc, function (data1) {
+									
+									var chkstatus = '';
+	
+							// ITERATING THROUGH OBJECTS
+							$.each(data1, function (key, value) {
+	
+								//CONSTRUCTION OF ROWS HAVING
+								// DATA FROM JSON OBJECT
+								chkstatus += '<tr>';
+								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\">' + value.name + '</a></td>';
+								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\"><i class="material-icons"">shield</i></a></td>';
+								chkstatus += '</tr>';
+							})
+							
+							//INSERTING ROWS INTO TABLE
+							$('#table1').append(chkstatus);
+								});
+					});
+				</script>
+				</table>
+				
 		
 		</div>
 	</section>
