@@ -1,0 +1,43 @@
+[
+
+     { 
+         "url": "$SITE_MAIN_ADMIN",
+         "realurl": "https://www.santaclaraca.gov/Admin/",
+         "realname":""
+     },
+     { 
+         "url": "$SITE_MAIN_EMAIL",
+         "realurl": "https://admin.govdelivery.com/",
+         "realname":""
+     },
+     { 
+         "url": "$SITE_SEO_C",
+         "realurl": "https://my.cludo.com/",
+         "realname":""
+     },
+     { 
+         "url": "$SITE_SAFETY",
+         "realurl": "https://mark43.com/",
+         "realname":""
+     },
+     { 
+        "url": "$SITE_SAAS_PERF",
+        "realurl": "https://id.siteimprove.com/Account/Login",
+        "realname":""
+     },
+     { 
+        "url": "$SITE_PEOPLESOFT",
+        "realurl": "https://ESS.SantaClaraCA.gov",
+        "realname":""
+     },
+     { 
+        "url": "$CUSTOMER_CONNECT",
+        "realurl": "https://mua.santaclaraca.gov/CC/Login.xml",
+        "realname":""
+     },
+     { 
+        "url": "$TITAN",
+        "realurl": "https://cityofsantaclara.mytitan.net/app/alarms.aspx",
+        "realname":""
+    }
+ ]
