@@ -47,7 +47,7 @@
 		.up {background-color:greenyellow}
 		.down {background-color:red}
 		
-		h1 {
+		#stadash h1 {
 			text-align: center;
 			color: #FFF;
 			font-size: xx-large;
@@ -73,7 +73,7 @@
 		td:nth-child(1) {
             text-align: left;
 		}
-		h1, th {background-color: #e5e5e6;
+		#stadash h1, th {background-color: #e5e5e6;
 opacity: 0.8;
 background-size: 12px 12px;
 background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.2000000000000002px, #e5e5e6 0, #e5e5e6 50%);}
@@ -81,7 +81,7 @@ background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.20000000
 </head>
 
 <body>
-	<section>
+	<section id="#stadash">
 		<h1>Uptime CSC</h1>
 		<div class="box">
 			
@@ -155,7 +155,7 @@ background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.20000000
 								// DATA FROM JSON OBJECT
 								chkstatus += '<tr>';
 								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\">' + value.name + '</a></td>';
-								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\"><i class="material-icons">shield</i></a></td>';
+								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\"><i class="material-icons">Link</i></a></td>';
 								chkstatus += '</tr>';
 							})
 							
