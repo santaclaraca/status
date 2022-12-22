@@ -15,6 +15,11 @@
 
 	<!-- CSS FOR STYLING THE PAGE -->
 	<style>
+		section#stadash {
+    		font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri', 'Trebuchet MS', 'sans-serif';
+			width: fit-content;
+    		margin: auto;
+		}
 		.material-icons {font-size: 17px;}
 
 		.box {
@@ -149,7 +154,7 @@ background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.20000000
 								// DATA FROM JSON OBJECT
 								chkstatus += '<tr>';
 								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\">' + value.name + '</a></td>';
-								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\"><class="material-icons">Link</a></td>';
+								chkstatus += '<td><a href=\"' + value.url + '\" target=\"_blank\"><i class="material-icons">shield</i></a></td>';
 								chkstatus += '</tr>';
 							})
 							
